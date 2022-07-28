@@ -1,5 +1,5 @@
 pipeline {
-    agent { label "Agent-Node" } 
+    agent { label "agentfarm" } 
 
     stages {
        stage ('Build') {
