@@ -1,5 +1,5 @@
 pipeline {
-    agent { label "agentfarm" } 
+    agent any
 
     stages {
        stage ('Build') {
@@ -12,13 +12,6 @@ pipeline {
               sh 'mvn compile'
           }
        } 
-       stage ('SonarQube analysis') {
-          steps {
-              withSonarQubeEnv('SonarCloud') {
-              sh 'mvn sonar:sonar'
                 }
           }
 
-      }  
-    }
-}
