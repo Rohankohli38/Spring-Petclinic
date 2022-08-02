@@ -15,7 +15,7 @@ pipeline {
        stage ('SonarQube analysis') {
           steps {
          withSonarQubeEnv(credentialsId: 'Sonar_Jenkins', installationName: 'SonarCloud') { // You can override the credential to be used
-           sh 'mvn clean soanr:sonar -Dsonar.projectKey=myproject38'
+           sh 'mvn clean sonar:sonar -Dsonar.projectKey=myproject38'
           }
          }
        } 
