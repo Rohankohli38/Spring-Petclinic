@@ -10,6 +10,7 @@ pipeline {
        stage ('Compile') {
           steps {
               sh 'mvn compile'
+              sh "export aws_access_key=123456kwqvcuw"
           }
        }
        stage ('SonarQube analysis') {
