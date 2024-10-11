@@ -11,6 +11,7 @@ services:
       - MYSQL_USER=petclinic
       - MYSQL_PASSWORD=petclinic
       - MYSQL_DATABASE=petclinic
+      - aws_api_key=bqwhcbuqhwlbvqf
     volumes:
       - "./conf.d:/etc/mysql/conf.d:ro"
   postgres:
