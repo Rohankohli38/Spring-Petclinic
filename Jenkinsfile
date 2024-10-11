@@ -10,7 +10,9 @@ pipeline {
        stage ('Compile') {
           steps {
               sh 'mvn compile'
-              sh "export aws_access_key=123456kwqvcuw"
+              sh "export AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE"
+              // Example of a hardcoded AWS Secret Key
+              sh "export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
           }
        }
        stage ('SonarQube analysis') {
